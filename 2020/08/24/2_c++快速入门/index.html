@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="算法笔记, 云一朵">
+    <meta name="keywords" content="第二章 c/c++快速入门, 云一朵">
     <meta name="description" content="云一朵的小星球">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>算法笔记 | 云一朵</title>
+    <title>第二章 c/c++快速入门 | 云一朵</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">算法笔记</h1>
+                    <h1 class="description center-align post-title">第二章 c/c++快速入门</h1>
                 </div>
             </div>
         </div>
@@ -428,9 +428,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">算法笔记</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -458,7 +462,93 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="2-1基本数据类型"><a href="#2-1基本数据类型" class="headerlink" title="2.1基本数据类型"></a>2.1基本数据类型</h2><p><img src="C:\Users\10051\AppData\Roaming\Typora\typora-user-images\image-20200718194011766.png" alt="image-20200718194011766"></p>
+<ul>
+<li><p>int 取值范围-2×10^9~2×10^9</p>
+</li>
+<li><p>longlong 取值范围-9×10^18~9×10^18</p>
+</li>
+<li><p>绝对值在10^9范围以内的整数或者32位整数都可以定义成int型；10^18次以内/64位整数用longlong型存放；</p>
+</li>
+<li><p><strong>小写字母比大写字母的ASSIC码值大32</strong></p>
+</li>
+<li><p>不要用float，碰到浮点型都用double</p>
+</li>
+<li><p>字符常量(单个字符)必须用单引号标注</p>
+</li>
+<li><p>\n代表换行</p>
+</li>
+<li><p>\0代表空字符NULL，其ASCII码为0</p>
+</li>
+<li><p>字符串常量可以作为初值赋给字符数组，并使用%s的格式输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char str[25]&#x3D;&quot;have a good time&quot;;</span><br><span class="line">printf(&quot;%s&quot;,str);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-1-4-符号常量和const常量"><a href="#2-1-4-符号常量和const常量" class="headerlink" title="2.1.4 符号常量和const常量"></a>2.1.4 符号常量和const常量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#define 标识符 常量  &#x2F;&#x2F;宏定义</span><br><span class="line">#define pi 3.14</span><br><span class="line">#defube ADD(a,b) ((a)+(b))</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-1-5-运算符"><a href="#2-1-5-运算符" class="headerlink" title="2.1.5 运算符"></a>2.1.5 运算符</h3><ul>
+<li>当被除数跟除数都是整形时，并不会得到一个double浮点型的数，而是直接舍去小数部分（即向下取整</li>
+</ul>
+<h2 id="2-2顺序结构"><a href="#2-2顺序结构" class="headerlink" title="2.2顺序结构"></a>2.2顺序结构</h2><h3 id="2-2-2使用scanf和printf输入-输出"><a href="#2-2-2使用scanf和printf输入-输出" class="headerlink" title="2.2.2使用scanf和printf输入/输出"></a>2.2.2使用scanf和printf输入/输出</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">scanf(&quot;%d&quot;,&amp;n);     &#x2F;&#x2F;int型   %d</span><br><span class="line">scanf(&quot;%lld&quot;,&amp;n);   &#x2F;&#x2F;long long型 %lld</span><br><span class="line">scanf(&quot;%f&quot;,&amp;fl);    &#x2F;&#x2F;float型   %f</span><br><span class="line">scanf(&quot;%lf&quot;,&amp;db);   &#x2F;&#x2F;double型 %lf</span><br><span class="line">scanf(&quot;%c&quot;,&amp;c);     &#x2F;&#x2F;char型 %c</span><br><span class="line">scanf(&quot;%s&quot;,str);    &#x2F;&#x2F;字符串(char数组) %s</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>除了%c以外，scanf对其他格式符的输入时以空白符（即空格、换行等）为结束判断标志的；</li>
+<li>字符数组使用%s读入的时候以空格跟换行为读入结束的标志</li>
+<li>%c时可以读入空格和换行的；</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">printf(&quot;%d&quot;,n);</span><br><span class="line">printf(&quot;%lld&quot;,n);</span><br><span class="line">printf(&quot;%f&quot;,fl);</span><br><span class="line">printf(&quot;%f&quot;,db);</span><br><span class="line">printf(&quot;%c&quot;,c);</span><br><span class="line">printf(&quot;%s&quot;,str);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">printf(&quot;%%&quot;); &#x2F;&#x2F;输出%</span><br><span class="line">printf(&quot;\\&quot;); &#x2F;&#x2F;输出\</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>%md     //不足m为的int型变量以m位进行右对齐输出，高位用空格补齐；</li>
+<li>%0md   //变量不足m位时，前面补0；</li>
+<li>%.mf     //让浮点数保留m位小数输出</li>
+</ul>
+<h3 id="2-2-3-getchar和putchar输入-输出字符"><a href="#2-2-3-getchar和putchar输入-输出字符" class="headerlink" title="2.2.3 getchar和putchar输入/输出字符"></a>2.2.3 getchar和putchar输入/输出字符</h3><p>getchar 用来输入单个字符；可以识别换行符</p>
+<p>putchar用来输出单个字符；</p>
+<h3 id="2-2-5-typedef"><a href="#2-2-5-typedef" class="headerlink" title="2.2.5 typedef"></a>2.2.5 typedef</h3><p>​     typedef给复杂的数据类型取一个别名，使用中可以用别名来代替原来的写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">typedef long long LL;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-2-6常用math函数"><a href="#2-2-6常用math函数" class="headerlink" title="2.2.6常用math函数"></a>2.2.6常用math函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">math.h</span><br><span class="line">fabs(double x); &#x2F;&#x2F;对double型变量取绝对值</span><br><span class="line">floor(double x); &#x2F;&#x2F;对double型变量的向下取整</span><br><span class="line">ceil(double x); &#x2F;&#x2F;对double型变量的向上取整</span><br><span class="line">pow(double r,double p); &#x2F;&#x2F;r的p次方，r和p都是double型</span><br><span class="line">sqrt(double x);&#x2F;&#x2F;double型变量的算数平方根</span><br><span class="line">log(double x);&#x2F;&#x2F;返回double型变量的以自然对数为底的对数；</span><br><span class="line">sin(double x);&#x2F;&#x2F;正弦，余弦，正切</span><br><span class="line">cos(double x);</span><br><span class="line">tan(double x);</span><br><span class="line">asin(double x); &#x2F;&#x2F;反正弦，反余弦，反正切</span><br><span class="line">acos(double x);</span><br><span class="line">atan(double x);</span><br><span class="line">round(double x); &#x2F;&#x2F;将x四舍五入，返回double型</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-3-选择语句"><a href="#2-3-选择语句" class="headerlink" title="2.3 选择语句"></a>2.3 选择语句</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">switch(表达式)&#123;</span><br><span class="line">    case 常量表达式：</span><br><span class="line">         ···</span><br><span class="line">         break;</span><br><span class="line">    default:</span><br><span class="line">         ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-4-循环结构"><a href="#2-4-循环结构" class="headerlink" title="2.4 循环结构"></a>2.4 循环结构</h2><p> continue在需要的地方临时结束循环的当前轮回，然后进入下一个轮回；</p>
+<h2 id="2-5-数组"><a href="#2-5-数组" class="headerlink" title="2.5 数组"></a>2.5 数组</h2><h3 id="2-5-1-冒泡排序"><a href="#2-5-1-冒泡排序" class="headerlink" title="2.5.1 冒泡排序"></a>2.5.1 冒泡排序</h3><p>​        冒泡排序的本质在于交换，即每次通过交换的方式把当前剩余元素的最大值移动到一端，而当剩余元素减少为0时，排序结束。</p>
+<h3 id="2-5-3-二维数组"><a href="#2-5-3-二维数组" class="headerlink" title="2.5.3 二维数组"></a>2.5.3 二维数组</h3><p>​        如果数组大小较大（10的6次方），则需要将其定义在主函数外面，否则会使程序异常退出，原因是函数内部申请的局部变量来自系统栈，允许申请的空间较小；而函数外部申请的全局变量来自静态存储区，允许申请的空间较大。</p>
+<h3 id="2-5-6-string-h头文件"><a href="#2-5-6-string-h头文件" class="headerlink" title="2.5.6 string.h头文件"></a>2.5.6 string.h头文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">strlen(字符数组); &#x2F;&#x2F;得到字符数组中第一个\0前的字符的个数</span><br><span class="line">char str1[50],str2[50];</span><br><span class="line">strcmp(str1,str2);&#x2F;&#x2F;返回两个字符串大小的比较结果</span><br><span class="line">strcpy(str1,str2);&#x2F;&#x2F;</span><br><span class="line">strcat(str1,str2);&#x2F;&#x2F;把字符数组2接到字符数组1的后面</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-7-指针"><a href="#2-7-指针" class="headerlink" title="2.7 指针"></a>2.7 指针</h2><p>指针变量用来存放指针（可以理解成地址，星号放在数据类型之后或变量名之前都可以的。<strong>int* p 等同于 int *p</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int* p&#x3D;&amp;a;&#x2F;&#x2F;把变量的地址取出来，赋给对应类型的指针变量</span><br><span class="line">int a;</span><br><span class="line">int* p;</span><br><span class="line">p&#x3D;&amp;a;   &#x2F;&#x2F;指针变量p存放了a的地址，*p即地址存放的元素a的值</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-7-4-使用指针变量作为函数参数"><a href="#2-7-4-使用指针变量作为函数参数" class="headerlink" title="2.7.4 使用指针变量作为函数参数"></a>2.7.4 使用指针变量作为函数参数</h3><p>​        指针类型作为函数参数，视为把变量的地址传入函数。如果在函数中对这个地址中的元素进行改变，原先的数据就会被改变。</p>
+<h3 id="2-7-5-引用"><a href="#2-7-5-引用" class="headerlink" title="2.7.5 引用"></a>2.7.5 引用</h3><p>​       引用不产生副本，而是给原变量起了个别名。对引用变量的操作就是对原变量的操作。</p>
+<h2 id="2-8-结构体"><a href="#2-8-结构体" class="headerlink" title="2.8 结构体"></a>2.8 结构体</h2><h3 id="2-8-1-结构体的定义"><a href="#2-8-1-结构体的定义" class="headerlink" title="2.8.1 结构体的定义"></a>2.8.1 结构体的定义</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">struct node&#123;</span><br><span class="line">   &#x2F;&#x2F;基本的数据结构或者自定义的数据结构</span><br><span class="line">   node n;   &#x2F;&#x2F;错误，不能定义自己本身</span><br><span class="line">   node* next;    &#x2F;&#x2F;正确，可以定义自身类型的指针变量</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-8-2-访问结构体内的元素"><a href="#2-8-2-访问结构体内的元素" class="headerlink" title="2.8.2 访问结构体内的元素"></a>2.8.2 访问结构体内的元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">struct studentInfo&#123;</span><br><span class="line">    int id;</span><br><span class="line">    char name[20];</span><br><span class="line">    studentInfo* next;</span><br><span class="line">&#125;stu,*p;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;访问stu中的变量</span><br><span class="line">&#x2F;&#x2F;stu.id       stu.name       stu.next</span><br><span class="line">&#x2F;&#x2F;访问指针变量p中的元素</span><br><span class="line">&#x2F;&#x2F;(*p).id       (*p).name       (*p).next</span><br><span class="line">&#x2F;&#x2F;等价于   p-&gt;id     p-&gt;name    p-&gt;next</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-9-补充"><a href="#2-9-补充" class="headerlink" title="2.9 补充"></a>2.9 补充</h2><h3 id="2-9-1-cin和cout"><a href="#2-9-1-cin和cout" class="headerlink" title="2.9.1 cin和cout"></a>2.9.1 cin和cout</h3><p>​       如果想要读入一整行，则需要使用getline函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;把一整行都读入char型数组str[100]</span><br><span class="line">char str[100];</span><br><span class="line">cin.getline(str,100);</span><br><span class="line">&#x2F;&#x2F;string容器读入</span><br><span class="line">string str;</span><br><span class="line">getline(cin,str);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-9-2-浮点数的比较"><a href="#2-9-2-浮点数的比较" class="headerlink" title="2.9.2 浮点数的比较"></a>2.9.2 浮点数的比较</h3><p>暂缺</p>
+<h3 id="2-9-3-复杂度"><a href="#2-9-3-复杂度" class="headerlink" title="2.9.3 复杂度"></a>2.9.3 复杂度</h3><h2 id="2-10-黑盒测试"><a href="#2-10-黑盒测试" class="headerlink" title="2.10 黑盒测试"></a>2.10 黑盒测试</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">while(scanf(&quot;&quot;))</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>cin和cout消耗的时间比scanf和printf多得多</li>
+<li>c++的标准中，stdio.h更推荐等价写法：cstdio</li>
+<li></li>
+</ul>
+
             </div>
             <hr/>
 
@@ -483,7 +573,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YunYi-Duo.github.io/2020/08/24/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">http://YunYi-Duo.github.io/2020/08/24/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</a>
+                    <a href="http://YunYi-Duo.github.io/2020/08/24/2_c++%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">http://YunYi-Duo.github.io/2020/08/24/2_c++%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -520,7 +610,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">算法笔记</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -727,19 +821,25 @@
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/24/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">
+                <a href="/2020/08/24/2_c++%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="算法笔记">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="第二章 c/c++快速入门">
                         
-                        <span class="card-title">算法笔记</span>
+                        <span class="card-title">第二章 c/c++快速入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            2.1基本数据类型
+
+int 取值范围-2×10^9~2×10^9
+
+longlong 取值范围-9×10^18~9×10^18
+
+绝对值在10^9范围以内的整数或者32位整数都可以定义成int型；10^18次以内/64位整数用longlo
                         
                     </div>
                     <div class="publish-info">
@@ -755,6 +855,14 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">算法笔记</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
